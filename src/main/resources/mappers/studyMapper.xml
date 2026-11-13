@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="user2NS"> -->
+<mapper namespace="com.spring.greenStudyS.dao.StudyDAO">
+ 
+	<select id="userMidList" resultType="String">
+	  select mid from user2 order by mid;
+	</select>
+	
+	<select id="userGenderSearch" resultType="com.spring.greenStudyS.vo.User2VO">
+	  select distinct gender from user2 order by gender;
+	</select>
+	
+	<select id="userMidSearch" resultType="com.spring.greenStudyS.vo.User2VO">
+		select * from user2 where mid = #{mid};
+	</select>
+	
+	<select id="userGenderList" resultType="com.spring.greenStudyS.vo.User2VO">
+		select * from user2 where gender = #{gender};
+	</select>
+  
+</mapper>
